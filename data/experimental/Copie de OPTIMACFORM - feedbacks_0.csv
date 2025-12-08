@@ -1,0 +1,130 @@
+n,action_name,motivation,feedback
+1,weekly,-2,"Oui, mais pas sûr"
+1,monthly,2,Oui
+1,as_usual,2,Oui
+2,weekly,-3,Non
+2,monthly,3,Oui
+2,as_usual,2,"Oui, mais pas sûr"
+7,weekly,-1,Non
+7,monthly,1,Non
+7,as_usual,2,Non
+5,weekly,-3,Non
+5,monthly,-3,Non
+5,as_usual,3,Oui
+8,weekly,-1,"Oui, mais pas sûr"
+8,monthly,1,Oui
+8,as_usual,1,Oui
+9,weekly,-2,"Oui, mais pas sûr"
+9,monthly,1,"Oui, mais pas sûr"
+9,as_usual,0,"Oui, mais pas sûr"
+10,weekly,-1,"Oui, mais pas sûr"
+10,monthly,1,"Oui, mais pas sûr"
+10,as_usual,0,"Oui, mais pas sûr"
+11,weekly,-2,Oui
+11,monthly,2,Oui
+11,as_usual,1,Oui
+12,weekly,-1,"Oui, mais pas sûr"
+12,monthly,1,"Oui, mais pas sûr"
+12,as_usual,2,Oui
+14,weekly,-3,"Oui, mais pas sûr"
+14,monthly,-1,"Oui, mais pas sûr"
+14,as_usual,2,Oui
+13,weekly,1,"Oui, mais pas sûr"
+13,monthly,2,"Oui, mais pas sûr"
+13,as_usual,3,Oui
+15,weekly,1,"Oui, mais pas sûr"
+15,monthly,2,Oui
+15,as_usual,2,Oui
+16,weekly,-2,Non
+16,monthly,2,Non
+16,as_usual,0,Non
+17,weekly,-2,"Oui, mais pas sûr"
+17,monthly,2,Oui
+17,as_usual,2,Oui
+18,weekly,3,Oui
+18,monthly,3,Oui
+18,as_usual,3,Oui
+19,weekly,3,Oui
+19,monthly,3,Oui
+19,as_usual,3,Oui
+20,weekly,1,"Oui, mais pas sûr"
+20,monthly,3,"Oui, mais pas sûr"
+20,as_usual,1,Oui
+22,weekly,-1,"Oui, mais pas sûr"
+22,monthly,3,Oui
+22,as_usual,3,Oui
+21,weekly,1,"Oui, mais pas sûr"
+21,monthly,3,Oui
+21,as_usual,-2,Oui
+24,weekly,-2,Non
+24,monthly,1,"Oui, mais pas sûr"
+24,as_usual,1,Oui
+25,weekly,-1,"Oui, mais pas sûr"
+25,monthly,1,Oui
+25,as_usual,1,Oui
+26,weekly,3,Oui
+26,monthly,3,Oui
+26,as_usual,3,Oui
+27,weekly,-1,Non
+27,monthly,-1,Non
+27,as_usual,2,Non
+29,weekly,-1,Non
+29,monthly,1,"Oui, mais pas sûr"
+29,as_usual,2,Oui
+30,weekly,-3,"Oui, mais pas sûr"
+30,monthly,-2,Oui
+30,as_usual,1,Oui
+31,weekly,-3,"Oui, mais pas sûr"
+31,monthly,2,Oui
+31,as_usual,3,Oui
+33,weekly,-3,Non
+33,monthly,2,Oui
+33,as_usual,2,Oui
+67,weekly,-2,Non
+67,monthly,-2,Non
+67,as_usual,-2,Non
+69,weekly,-3,Non
+69,monthly,1,"Oui, mais pas sûr"
+69,as_usual,2,Oui
+70,weekly,1,"Oui, mais pas sûr"
+70,monthly,1,Oui
+70,as_usual,1,Oui
+68,weekly,-1,"Oui, mais pas sûr"
+68,monthly,2,"Oui, mais pas sûr"
+68,as_usual,3,Oui
+72,weekly,-3,Oui
+72,monthly,0,Oui
+72,as_usual,-2,Oui
+71,weekly,-3,"Oui, mais pas sûr"
+71,monthly,-1,"Oui, mais pas sûr"
+71,as_usual,-2,Oui
+76,weekly,-1,"Oui, mais pas sûr"
+76,monthly,1,"Oui, mais pas sûr"
+76,as_usual,2,"Oui, mais pas sûr"
+75,weekly,2,Oui
+75,monthly,3,Oui
+75,as_usual,3,Oui
+77,weekly,-3,Non
+77,monthly,1,Non
+77,as_usual,2,Oui
+79,weekly,1,Oui
+79,monthly,2,Oui
+79,as_usual,2,Oui
+80,weekly,-3,Non
+80,monthly,1,Non
+80,as_usual,1,Oui
+81,weekly,1,Non
+81,monthly,2,Non
+81,as_usual,2,Non
+82,weekly,-2,Non
+82,monthly,0,Non
+82,as_usual,1,Non
+83,weekly,-2,"Oui, mais pas sûr"
+83,monthly,-1,Oui
+83,as_usual,1,Oui
+84,weekly,-3,"Oui, mais pas sûr"
+84,monthly,-1,Oui
+84,as_usual,2,"Oui, mais pas sûr"
+86,weekly,1,"Oui, mais pas sûr"
+86,monthly,3,Oui
+86,as_usual,3,Oui
