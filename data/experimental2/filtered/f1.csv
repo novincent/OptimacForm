@@ -77,9 +77,6 @@ n,action_name,motivation,feedback
 33,weekly,3,Oui
 33,monthly,0,Oui
 33,notatall,-3,Non
-67,weekly,-2,Non
-67,monthly,-2,Non
-67,notatall,-2,Non
 69,weekly,2,"Oui, mais pas sûr"
 69,monthly,1,"Oui, mais pas sûr"
 69,notatall,-3,"Oui, mais pas sûr"
@@ -113,15 +110,9 @@ n,action_name,motivation,feedback
 81,weekly,-1,"Oui, mais pas sûr"
 81,monthly,2,Oui
 81,notatall,1,Oui
-82,weekly,2,"Oui, mais pas sûr"
-82,monthly,2,"Oui, mais pas sûr"
-82,notatall,-1,Oui
 83,weekly,1,"Oui, mais pas sûr"
 83,monthly,2,Oui
 83,notatall,1,Oui
-84,weekly,3,Oui
-84,monthly,3,Oui
-84,notatall,-3,Oui
 86,weekly,3,Oui
 86,monthly,3,Oui
 86,notatall,3,Oui
