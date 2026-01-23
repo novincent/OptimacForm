@@ -19,13 +19,8 @@ class Participant:
         self.motivations :: (string:int)dict | stores the motivations corresponding to the different options
         self.initial_measure :: int | stores the measures taken before the experiment
         """
-        # Assign the provided participant ID to the object's 'id' attribute
         self.id = participant_id
        
-        #list of mowing possibilities
-        #mowing_frequencies = ['once_a_day', 'once_every_two_days', 'once_per_week', 'once_every_two_weeks','once_per_month', 'once_every_six_months', 'once_a_year', 'never']
-
-        #new_frequence_dict
         self.motivations = motivation_dict
 
         self.measures = measures
@@ -38,9 +33,6 @@ class Participant:
             'participant': self.id,
             'motivations': self.motivations,
             'measures' : self.measures
-            #'geo_loc': self.geo_loc,
-            #'garden_neighbourg': self.garden_neighbouring,
-            #'self_eval': self.self_eval,
         }
 
 
@@ -48,7 +40,6 @@ class RandomParticipant(Participant):
     
     def __init__(self,participant_id, action_list,i_bias):
             
-        # Set the seed for random number generation using a custom seed based on participant data
         self.id  = participant_id
         seed(self.get_seed(self.id))
         

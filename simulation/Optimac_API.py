@@ -9,11 +9,7 @@ from streamlit_gsheets import GSheetsConnection
 
 allocated_actions_file_name = "../data/allocated_actions.csv"
 action_stats_file_name = "../data/action_stats.csv"
-'''
-This is used to create forms etc
 
-data.csv stores the allocated actions with following columns: n, action_label, motivation (of the participant for said action)
-'''
 
 action_lock = threading.Lock()
 feedback_lock = threading.Lock()

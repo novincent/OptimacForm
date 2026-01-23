@@ -34,18 +34,6 @@ def assign_action(n, motivations, list_actions, participants_allocated_actions):
     return False
 
 
-# def force_assign_action(n, ordered_actions, list_actions, participants_allocated_actions):
-#     """
-#     Forces assignment of the first available action in the ordered list.
-#     Used when no action meets normal allocation criteria.
-#     """
-#     print(coucou)
-#     label, value = next(iter(ordered_actions.items()))
-#     for action in list_actions:
-#         if action['action'] == label:
-#             update_action_proportions(n, action, list_actions, label)
-#             participants_allocated_actions.append((n, label, value))
-#             break
 
 
 def update_action_proportions(n, list_actions, assigned_label):
