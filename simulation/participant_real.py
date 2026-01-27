@@ -30,7 +30,7 @@ class Participant:
        
     def to_dict(self):
         return {
-            'participant': self.id,
+            'id': self.id,
             'motivations': self.motivations,
             'measures' : self.measures
         }

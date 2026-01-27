@@ -9,7 +9,7 @@ def get_ordered_actions(motivations,list_actions):
     sorting_key = lambda item: (item[1],list_actions[item[0]]["target"]-list_actions[item[0]]["current"])
     return sorted(motivations.items(),key=sorting_key, reverse=True)
 
-def assign_action(n, motivations, list_actions, participants_allocated_actions):
+def assign_action(n,id_number, motivations, list_actions, participants_allocated_actions):
     """
     Tries to assign the best action to the current participant.
     Falls back to the first action if none match allocation rules.
@@ -18,7 +18,7 @@ def assign_action(n, motivations, list_actions, participants_allocated_actions):
 
     Side-effect:   If it works :
                     - updates action proportions
-                    - appends (n,label,value) to participants_allocated_actions
+                    - appends (id,label,value) to participants_allocated_actions
     """
     ordered_actions = get_ordered_actions(motivations,list_actions)
 
@@ -29,7 +29,7 @@ def assign_action(n, motivations, list_actions, participants_allocated_actions):
         if (n/(n+1))*action['current'] < action['target'] or (n * action['current'] < action['minimum']):
                 #if (n/(n+1))*action['current'] < action['target_proportion']:
             update_action_proportions(n, list_actions, label)
-            participants_allocated_actions.append((n, label, value))
+            participants_allocated_actions.append((id_number, label, value))
             return True
     return False
 
@@ -83,9 +83,9 @@ def allocate_action_to_participant(participant, n, list_actions, participants_al
     side-effects:
     -   fills participants_allocated_actions up
     """
-    
+    id_number = participant["id"]
     motivations = participant["motivations"]
-    assigned = assign_action(n, motivations, list_actions, participants_allocated_actions)
+    assigned = assign_action(n,id_number, motivations, list_actions, participants_allocated_actions)
     # if not assigned:
     #     force_assign_action(n, ordered_actions, list_actions, participants_allocated_actions)
     n = n + 1
