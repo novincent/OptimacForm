@@ -69,6 +69,26 @@ def allocate_actions_to_participants(part_df, list_actions):
         n = allocate_action_to_participant(part_df.iloc[i], n, list_actions, participants_allocated_actions)
     return participants_allocated_actions
 
+def allocate_actions_to_participants_list(part_list, list_actions):
+    """
+    Main function to iterate over participants and assign actions.
+    Returns the list of allocated actions.
+    args:
+    -   part_list :: disct list | list of Participants objects (in their dict representation)
+    -   list_actions :: dict dict | list of actions 
+    (represented by a dict {action (:str) :{target (:float), current(:float), minimum (:int) }})
+    
+    returns : 
+
+    -   participants_allocated_actions :: (int, str, float) list | (value of n, label of the action, motivation of the participant for this action) list
+    """
+    n = 0
+    participants_allocated_actions = []
+    #print(part_df)
+    for i in range(len(part_list)):
+        n = allocate_action_to_participant(part_list[i], n, list_actions, participants_allocated_actions)
+    return participants_allocated_actions
+
 def allocate_action_to_participant(participant, n, list_actions, participants_allocated_actions):
     """
     args:
