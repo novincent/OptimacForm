@@ -1,39 +1,41 @@
-
+import random as rd
 
 
 def get_ordered_actions(motivations,list_actions):
     """
     Return actions orderded by their preferences.
     """
-    #return {k: v for k, v in sorted(freq_dict.items(), key=lambda item: item[1], reverse=True)}
-    sorting_key = lambda item: (item[1],list_actions[item[0]]["target"]-list_actions[item[0]]["current"])
+    sorting_key = lambda item: (item[1],rd.random())
     return sorted(motivations.items(),key=sorting_key, reverse=True)
 
-def assign_action(n,id_number, motivations, list_actions, participants_allocated_actions):
+def assign_action(participant,n, list_actions, allocated_actions):
     """
-    Tries to assign the best action to the current participant.
-    Falls back to the first action if none match allocation rules.
+    args:
+    -   participant :: dict | object from Participant class in its dict representation
+    -   n :: int | counter
+    -   list_actions :: dict list | dict of actions : {action_name : {target_proportion: float, current: float, minimum : int}}
+    -   participants_allocated_actions :: (int, str, float) list | (value of n, label of the action, motivation of the participant for this action) list
 
-    Returns : True if "the best action has been assigned"
 
-    Side-effect:   If it works :
-                    - updates action proportions
-                    - appends (id,label,value) to participants_allocated_actions
+    side-effects:
+    -   fills participants_allocated_actions up
+
+    Finds the best action for the given participant (represented by their id_number and motivations).
+
+    Assigns said action to the participant and update the current matching (allocated actions)
     """
+    id_number = participant["id"]
+    motivations = participant["motivations"]
+
     ordered_actions = get_ordered_actions(motivations,list_actions)
-
 
     for label, value in ordered_actions:
 
         action = list_actions[label]
         if (n/(n+1))*action['current'] < action['target'] or (n * action['current'] < action['minimum']):
-                #if (n/(n+1))*action['current'] < action['target_proportion']:
             update_action_proportions(n, list_actions, label)
-            participants_allocated_actions.append((id_number, label, value))
-            return True
-    return False
-
-
+            allocated_actions.append((id_number, label, value))
+            return
 
 
 def update_action_proportions(n, list_actions, assigned_label):
@@ -57,16 +59,12 @@ def allocate_actions_to_participants(part_df, list_actions):
     (represented by a dict {action (:str) :{target (:float), current(:float), minimum (:int) }})
     
     returns : 
-
     -   participants_allocated_actions :: (int, str, float) list | (value of n, label of the action, motivation of the participant for this action) list
-
-
     """
     n = 0
     participants_allocated_actions = []
-    #print(part_df)
     for i in range(len(part_df)):
-        n = allocate_action_to_participant(part_df.iloc[i], n, list_actions, participants_allocated_actions)
+        n = assign_action(part_df.iloc[i], n, list_actions, participants_allocated_actions)
     return participants_allocated_actions
 
 def allocate_actions_to_participants_list(part_list, list_actions):
@@ -84,30 +82,10 @@ def allocate_actions_to_participants_list(part_list, list_actions):
     """
     n = 0
     participants_allocated_actions = []
-    #print(part_df)
     for i in range(len(part_list)):
-        n = allocate_action_to_participant(part_list[i], n, list_actions, participants_allocated_actions)
+        assign_action(part_list[i], n, list_actions, participants_allocated_actions)
+        n+=1
     return participants_allocated_actions
 
-def allocate_action_to_participant(participant, n, list_actions, participants_allocated_actions):
-    """
-    args:
-    -   participant :: dict | object from Participant class in its dict representation
-    -   n :: int | counter
-    -   list_actions :: dict list | dict of actions : {action_name : {target_proportion: float, current: float, minimum : int}}
-    -   participants_allocated_actions :: (int, str, float) list | (value of n, label of the action, motivation of the participant for this action) list
 
-    returns:
-    -   n :: int
-    
-    side-effects:
-    -   fills participants_allocated_actions up
-    """
-    id_number = participant["id"]
-    motivations = participant["motivations"]
-    assigned = assign_action(n,id_number, motivations, list_actions, participants_allocated_actions)
-    # if not assigned:
-    #     force_assign_action(n, ordered_actions, list_actions, participants_allocated_actions)
-    n = n + 1
-    return n
 
