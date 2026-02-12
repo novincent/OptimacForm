@@ -72,7 +72,7 @@ def plot_violins(xs,title,ylabel,ylim = (0,0.4)):
     plt.figure(figsize=(16, 10))
     ax = sns.violinplot(data=df_ratios, x='Algorithm', y="Data", hue='Algorithm', inner='quart', palette=method_colors, legend=False)
     ax.tick_params(axis='y', labelsize=16)
-    ax.set_xlabel("Algorithm", fontsize=20)
+    ax.set_xlabel("", fontsize=20)
     ax.set_xticklabels(methods, fontsize=18)
     ax.set_ylim(ylim)
     ax.set_ylabel(ylabel, fontsize=20)
